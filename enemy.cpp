@@ -118,7 +118,7 @@ int Enemy::getScore(void) {
 	return score;
 }
 
-// デバッグ用
+
 #include <iostream>
 void Enemy::dump(void) {
 	std::cout << "\n--EnemyDumpStart" << std::endl;

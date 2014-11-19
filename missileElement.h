@@ -40,7 +40,7 @@ public:
 	void toInactive(void);
 	
 public:
-	static int count; // デバッグ用
+	static int count;
 };
 
 #endif // ___MISSILE_ELEMENT_H

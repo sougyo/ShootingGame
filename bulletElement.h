@@ -41,8 +41,8 @@ public:
 	void rotate(double);
 	void deleteExtraBulletElement(void);
 	
-	static int count; // デバッグ用
-	void dump(void); // デバッグ用
+	static int count;
+	void dump(void);
 	
 private:
 	void toInactive(void);

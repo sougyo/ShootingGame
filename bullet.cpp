@@ -81,7 +81,7 @@ BulletElement* Bullet::getBulletElement(int index) {
 	return &bulletElements[index];
 }
 
-#include <iostream> // デバッグ用
+#include <iostream>
 void Bullet::dump(void) {
 	std::cout << "\n--BulletDumpStart" << std::endl;
 	for (int i = 0; i < size; i++)

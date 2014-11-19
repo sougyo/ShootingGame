@@ -10,7 +10,7 @@ using itemutil::Item;
 
 EffectPool* EnemyElement::effectPool = 0;
 gamesystem::GameInformation* EnemyElement::gameInformation = 0;
-int EnemyElement::count = 0;// デバッグ用
+int EnemyElement::count = 0;
 
 EnemyElement::EnemyElement(enemyutil::Enemy* owner, double x, double y, double vr, double vtheta, int time, int delay, int hp, Bullet** bullets, Bullet** killedBullets, Enemy** enemys, Item* item)
 		: Moveable(x, y, vr, vtheta, time) {
@@ -26,7 +26,7 @@ EnemyElement::EnemyElement(enemyutil::Enemy* owner, double x, double y, double v
 	this->item = item;
 	score = getScore();
 	
-	count++; // デバッグ用
+	count++;
 }
 
 EnemyElement::~EnemyElement(void) {
@@ -40,7 +40,7 @@ EnemyElement::~EnemyElement(void) {
 	delete[] killedBullets;
 	delete item;
 	
-	count--; // デバッグ用
+	count--;
 }
 
 void EnemyElement::fire(int x, int y) {
@@ -171,7 +171,7 @@ void EnemyElement::deleteFollowBullets(void) {
 	
 }
 
-#include <iostream> // デバッグ用
+#include <iostream>
 void EnemyElement::dump(void) {
 	std::cout << x << '\t' << y << '\t' << vr << '\t' << vtheta << '\t' << time << '\t' << hp << '\t' << delay << std::endl;
 }

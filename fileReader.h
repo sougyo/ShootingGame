@@ -37,7 +37,7 @@ private:
 	std::string decrypt(std::fstream&);
 	
 public:
-	static int count; // デバッグ用
+	static int count;
 };
 
 #endif // ___FILE_READER_H

@@ -9,7 +9,7 @@ using gameutil::FileReader;
 string FileReader::prevFileName = "";
 string FileReader::decryptedString = "";
 
-int FileReader::count = 0; // デバッグ用
+int FileReader::count = 0;
 
 FileReader::FileReader(const char* fileName) {
 	fstream fin(fileName, std::ios::in | std::ios::binary);
@@ -18,7 +18,7 @@ FileReader::FileReader(const char* fileName) {
 	in = new istringstream(decryptedStr);
 	fin.close();
 
-	count++; // デバッグ用
+	count++;
 }
 
 FileReader::FileReader(const char* fileName, const char* virtualFileName) : in(0) {
@@ -36,12 +36,12 @@ FileReader::FileReader(const char* fileName, const char* virtualFileName) : in(0
 	int lastIndex = static_cast<int>(decryptedString.find("%%%", startIndex)) - 1;
 	in = new istringstream(decryptedString.substr(startIndex, lastIndex - startIndex));
 
-	count++; // デバッグ用
+	count++;
 }
 
 FileReader::~FileReader(void) {
 	delete in;
-	count--; // デバッグ用
+	count--;
 }
 
 string FileReader::readLine(void) {

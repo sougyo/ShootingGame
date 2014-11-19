@@ -35,7 +35,7 @@ public:
 	inline int getSize(void) const { return static_cast<int>(enemyPatternElements.size()); }
 	
 public:
-	static int count; // デバッグ用
+	static int count;
 };
 
 #endif // ___ENEMY_PATTERN_H

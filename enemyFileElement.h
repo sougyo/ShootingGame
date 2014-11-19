@@ -34,8 +34,8 @@ public:
 	inline const std::string& getImagePatternString(void) const { return imagePatternString; }
 	inline const std::string& getOptionPatternString(void) const { return optionPatternString; }
 
-	static int count; // デバッグ用
-	void dump(void); // デバッグ用
+	static int count;
+	void dump(void);
 };
 
 #endif // ___ENEMY_FILE_ELEMENT_H

@@ -7,16 +7,16 @@ using enemyIO::EnemyFile;
 using enemyIO::EnemyFileElement;
 using factory::EnemyFactory;
 
-int EnemyPattern::count = 0; // デバッグ用
+int EnemyPattern::count = 0;
 
 EnemyPattern::EnemyPattern(const EnemyFile* enemyFile) : currentTime(0) {
 	this->enemyFile = enemyFile;
 	
-	count++; // デバッグ用
+	count++;
 }
 
 EnemyPattern::~EnemyPattern(void) {
-	count--; // デバッグ用
+	count--;
 }
 
 void EnemyPattern::addEnemyPatternElement(const EnemyFileElement* enemyFileElement, int time) {

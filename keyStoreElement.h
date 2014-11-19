@@ -4,7 +4,7 @@
 #include <vector>
 
 namespace gamesystem {
-	class KeyStoreElement; // コピーコンストラクタ、代入演算子未定義
+	class KeyStoreElement;
 }
 
 class gamesystem::KeyStoreElement {

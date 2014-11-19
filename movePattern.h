@@ -57,8 +57,8 @@ public:
 	inline int isAim(int index) const { return movePatternElements[index].atheta == Aim; }
 	inline int isHoming(int index) const { return movePatternElements[index].atheta == Homing; }
 
-	static int count; // デバッグ用
-	void dump(void); // デバッグ用
+	static int count;
+	void dump(void);
 	
 private:
 	inline double getAimTheta(gameutil::Moveable*);

@@ -24,7 +24,7 @@ private:
 public:
 	TalkEventElement(std::string, int);
 	~TalkEventElement(void);
-	// コピーコンストラクタ、代入演算子はデフォルトの物を使用
+	
 	
 public:
 	inline int getPosition(void) const { return position; }

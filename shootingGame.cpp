@@ -192,7 +192,7 @@ void ShootingGame::draw(void) {
 		gameutil::drawNowLoadingImage();
 		return;
 	}
-	//if (keyStore.getSize() != 0 && !keyStore.getKeyStoreElement(keyStore.getSize()-1).isSkip())
+	
         backGround->draw();
 	if (!pause->isActive()) {
 		effectTable.draw();

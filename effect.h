@@ -37,7 +37,7 @@ public:
 	inline bool isActive(void) const { return isActive_; }
 	
 public:
-	static int count; // デバッグ用
+	static int count;
 };
 
 #endif // ___EFFECT_H

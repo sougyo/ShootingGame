@@ -32,7 +32,7 @@ public:
 	inline int getSize(void) const { return static_cast<int>(enemyFileElements.size()); }
 	inline const bulletIO::BulletFile * getBulletFile(void) const { return bulletFile; }
 	
-	void dump(void); // デバッグ用
+	void dump(void);
 };
 
 #endif // ___ENEMY_FILE_H

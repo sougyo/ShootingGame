@@ -27,7 +27,7 @@ public:
 	const bulletIO::BulletFileElement* getBulletFileElement(int) const;
 	const bulletIO::BulletFileElement* searchBulletFileElement(std::string) const;
 	inline int getSize(void) const { return static_cast<int>(bulletFileElements.size()); }
-	void dump(void); // デバッグ用
+	void dump(void);
 };
 
 #endif // ___BULLET_FILE_H

@@ -3,7 +3,7 @@
 using bulletIO::BulletFileElement;
 using std::string;
 
-int BulletFileElement::count = 0; // デバッグ用
+int BulletFileElement::count = 0;
 
 BulletFileElement::BulletFileElement(string name, string image, string isStr, string mpStr) {
 	bulletName = name;
@@ -11,7 +11,7 @@ BulletFileElement::BulletFileElement(string name, string image, string isStr, st
 	initialStateString = isStr;
 	movePatternString = mpStr;
 	
-	count++; // デバッグ用
+	count++;
 }
 
 BulletFileElement::BulletFileElement(const BulletFileElement& element) {
@@ -20,11 +20,11 @@ BulletFileElement::BulletFileElement(const BulletFileElement& element) {
 	initialStateString = element.initialStateString;
 	movePatternString = element.movePatternString;
 	
-	count++; // デバッグ用
+	count++;
 }
 
 BulletFileElement::~BulletFileElement(void) {
-	count--; // デバッグ用
+	count--;
 }
 
 BulletFileElement& BulletFileElement::operator=(const BulletFileElement& element) {

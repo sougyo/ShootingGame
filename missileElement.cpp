@@ -4,7 +4,7 @@ using missileutil::Missile;
 using missileutil::MissileElement;
 
 gamesystem::Fighter* MissileElement::fighter = 0;
-int MissileElement::count = 0; // デバッグ用
+int MissileElement::count = 0;
 
 MissileElement::MissileElement(Missile* owner, double x, double y, double vr, double vtheta, int time)
 		: gameutil::Moveable(x, y, vr, vtheta, time) {
@@ -15,10 +15,10 @@ MissileElement::MissileElement(Missile* owner, double x, double y, double vr, do
 	initialState.vtheta = vtheta;
 	initialState.time = time;
 	
-	count++; // デバッグ用
+	count++;
 }
 MissileElement::~MissileElement(void) {
-	count--; // デバッグ用
+	count--;
 }
 
 void MissileElement::fire(void) {

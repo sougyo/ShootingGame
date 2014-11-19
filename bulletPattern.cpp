@@ -7,14 +7,14 @@ using bulletutil::BulletPatternElement;
 using bulletIO::BulletFileElement;
 using factory::BulletFactory;
 
-int BulletPattern::count = 0; // デバッグ用
+int BulletPattern::count = 0;
 
 BulletPattern::BulletPattern(void) : currentTime(0) {
-	count++; // デバッグ用
+	count++;
 }
 
 BulletPattern::~BulletPattern(void) {
-	count--; // デバッグ用
+	count--;
 }
 
 void BulletPattern::addBulletPatternElement(const BulletFileElement* bfe, double angle, int time) {

@@ -14,25 +14,25 @@ gamesystem::Fighter* MovePattern::fighter = 0;
 gameutil::Table<enemyutil::Enemy>* MovePattern::enemyTable = 0;
 gameutil::Table<enemyutil::Enemy>* MovePattern::bossEnemyTable = 0;
 
-int MovePattern::count = 0; // デバッグ用
+int MovePattern::count = 0;
 
 MovePattern::MovePattern(int maxSize) : maxSize(maxSize), size(0), currentTime(0) {
 	movePatternElements = new MovePatternElement[maxSize];
 	
-	count++; // デバッグ用
+	count++;
 }
 
 MovePattern::MovePattern(double ar, double atheta, unsigned time) : maxSize(1), size(0), currentTime(0) {
 	movePatternElements = new MovePatternElement[1];
 	add(ar, atheta, time);
 	
-	count++; // デバッグ用
+	count++;
 }
 
 MovePattern::~MovePattern(void) {
 	delete[] movePatternElements;
 	
-	count--; // デバッグ用
+	count--;
 }
 
 void MovePattern::add(double ar, double atheta, unsigned time) {

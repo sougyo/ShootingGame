@@ -26,8 +26,8 @@ public:
 	inline const std::string& getInitialStateString(void) const { return initialStateString; }
 	inline const std::string& getMovePatternString(void) const { return movePatternString; }
 	
-	static int count; // デバッグ用
-	void dump(void) const ; // デバッグ用
+	static int count;
+	void dump(void) const ;
 };
 
 #endif // ___BULLET_FILE_ELEMENT_H

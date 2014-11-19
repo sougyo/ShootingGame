@@ -5,7 +5,7 @@ using itemutil::ItemElement;
 using itemutil::ItemKind;
 
 gameutil::MovePattern ItemElement::movePattern(-0.01,0,1);
-int ItemElement::count = 0; // デバッグ用
+int ItemElement::count = 0;
 
 
 ItemElement::ItemElement(Item* owner, double x, double y, const ItemKind* itemKind) 
@@ -13,11 +13,11 @@ ItemElement::ItemElement(Item* owner, double x, double y, const ItemKind* itemKi
 	this->owner = owner;
 	this->itemKind = itemKind;
 	
-	count++; // デバッグ用
+	count++;
 }
 
 ItemElement::~ItemElement(void) {
-	count--; // デバッグ用
+	count--;
 }
 
 void ItemElement::fire(int x, int y) {

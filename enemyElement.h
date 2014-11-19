@@ -58,9 +58,9 @@ public:
 	inline int getHp(void) const { return hp; }
 	int getScore(void);
 	
-	static int count; // デバッグ用
-	void dump(void); // デバッグ用
-	void dumpBullets(void); // デバッグ用
+	static int count;
+	void dump(void);
+	void dumpBullets(void);
 
 private:
 	int getBulletSize(void);

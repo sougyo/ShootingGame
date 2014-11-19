@@ -3,7 +3,7 @@
 using std::string;
 using enemyIO::EnemyFileElement;
 
-int EnemyFileElement::count = 0; // デバッグ用
+int EnemyFileElement::count = 0;
 
 EnemyFileElement::EnemyFileElement(string enemyName, string imageFileName, int hp, bool canCollide_, string isStr, string mpStr, string bpStr, string imStr, string opStr) {
 	this->enemyName		= enemyName;
@@ -16,11 +16,11 @@ EnemyFileElement::EnemyFileElement(string enemyName, string imageFileName, int h
 	this->imagePatternString	= imStr;
 	this->optionPatternString	= opStr;
 	
-	count++; // デバッグ用
+	count++;
 }
 
 EnemyFileElement::~EnemyFileElement(void) {
-	count--; // デバッグ用
+	count--;
 }
 
 EnemyFileElement::EnemyFileElement(const EnemyFileElement& element) {
@@ -34,7 +34,7 @@ EnemyFileElement::EnemyFileElement(const EnemyFileElement& element) {
 	imagePatternString	= element.imagePatternString;
 	optionPatternString	= element.optionPatternString;
 	
-	count++; // デバッグ用
+	count++;
 }
 
 EnemyFileElement& EnemyFileElement::operator=(const EnemyFileElement& element) {
@@ -52,7 +52,7 @@ EnemyFileElement& EnemyFileElement::operator=(const EnemyFileElement& element) {
 	return *this;
 }
 
-#include <iostream> //デバッグ用
+#include <iostream>
 void EnemyFileElement::dump(void) {
 	std::cout << "enemyName:" << enemyName << '\n'
 			  << "imageFileName:" << imageFileName << '\n'

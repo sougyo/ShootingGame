@@ -3,18 +3,18 @@
 using effectutil::Effect;
 using graphics::Image;
 
-int Effect::count = 0; // デバッグ用
+int Effect::count = 0;
 
 Effect::Effect(int maxSize) : maxSize(maxSize), size(0), x(0), y(0), time(0), isActive_(false) {
 	images = new Image*[maxSize];
 	
-	count++; // デバッグ用
+	count++;
 }
 
 Effect::~Effect(void) {
 	delete[] images;
 	
-	count--; // デバッグ用
+	count--;
 }
 
 void Effect::addEffectImage(Image* image) {

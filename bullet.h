@@ -57,7 +57,7 @@ public:
 	inline int getRadius(void) const { return radius; }
 	
 	bulletutil::BulletElement* getBulletElement(int);
-	void dump(void); // デバッグ用
+	void dump(void);
 };
 
 #endif // ___BULLET_H

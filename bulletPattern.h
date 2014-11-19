@@ -51,14 +51,14 @@ public:
 	
 	bool checkIndex(int, int);
 	
-	inline int getCurrentTime(void) const { return currentTime; } // for cppunit
-	void dump(void) const; // デバッグ用
+	inline int getCurrentTime(void) const { return currentTime; }
+	void dump(void) const;
 
 private:
 	bulletutil::BulletPatternElement initializeBulletPatternElement(const bulletIO::BulletFileElement*, double, int, bool);
 	
 public:
-	static int count; // デバッグ用
+	static int count;
 };
 
 #endif // ___BULLET_PATTERN_H

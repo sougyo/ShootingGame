@@ -9,13 +9,13 @@ using gamesystem::Fighter;
 effectutil::EffectPool* BulletElement::effectPool = 0;
 gamesystem::GameInformation* BulletElement::gameInformation = 0;
 
-int BulletElement::count = 0; // デバッグ用
+int BulletElement::count = 0;
 
 BulletElement::BulletElement(void) {
 	owner = 0;
 	isGraze = false;
 	
-	count++; // デバッグ用
+	count++;
 }
 
 BulletElement::BulletElement(bulletutil::Bullet* owner, double x, double y, double vr, double vtheta, int time) 
@@ -23,11 +23,11 @@ BulletElement::BulletElement(bulletutil::Bullet* owner, double x, double y, doub
 	this->owner = owner;
 	isGraze = false;
 	
-	count++; // デバッグ用
+	count++;
 }
 
 BulletElement::~BulletElement(void) {
-	count--; // デバッグ用
+	count--;
 }
 
 BulletElement::BulletElement(const BulletElement& bulletElement) {
@@ -41,7 +41,7 @@ BulletElement::BulletElement(const BulletElement& bulletElement) {
 	movePatternIndex = bulletElement.movePatternIndex;
 	isGraze			 = bulletElement.isGraze;
 	
-	count++; // デバッグ用
+	count++;
 }
 
 BulletElement& BulletElement::operator=(const BulletElement& bulletElement) {

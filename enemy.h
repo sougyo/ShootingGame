@@ -70,7 +70,7 @@ public:
 	
 	enemyutil::EnemyElement* getEnemyElement(int);
 	
-	void dump(void); // デバッグ用
+	void dump(void);
 
 private:
 	void rotateBullets(bulletutil::Bullet**, int, double);
