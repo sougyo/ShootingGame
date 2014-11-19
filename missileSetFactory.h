@@ -17,20 +17,20 @@
 
 class factory::MissileSetFactory {
 private:
-	MissileSetFactory(const factory::MissileSetFactory&);
-	const factory::MissileSetFactory& operator=(const factory::MissileSetFactory&);
-	
+    MissileSetFactory(const factory::MissileSetFactory&);
+    const factory::MissileSetFactory& operator=(const factory::MissileSetFactory&);
+    
 public:
-	MissileSetFactory(void);
-	~MissileSetFactory(void);
-	
+    MissileSetFactory(void);
+    ~MissileSetFactory(void);
+    
 public:
-	missileutil::MissileSet* createMissileSet(const missileIO::MissileFile*);
-	
+    missileutil::MissileSet* createMissileSet(const missileIO::MissileFile*);
+    
 private:
-	missileutil::Missile* createMissile(const missileIO::MissileFileElement*, int);
-	void analyzeInitialState(std::string, missileutil::Missile*, int, int);
-	int getMissileSize(std::string, int, int);
+    missileutil::Missile* createMissile(const missileIO::MissileFileElement*, int);
+    void analyzeInitialState(std::string, missileutil::Missile*, int, int);
+    int getMissileSize(std::string, int, int);
 };
 
 #endif // ___MISSILE_SET_FACTORY_H

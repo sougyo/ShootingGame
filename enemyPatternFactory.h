@@ -11,18 +11,18 @@
 
 class factory::EnemyPatternFactory {
 private:
-	const enemyIO::EnemyFile* enemyFile;
-	
+    const enemyIO::EnemyFile* enemyFile;
+    
 private:
-	EnemyPatternFactory(const factory::EnemyPatternFactory&);
-	const factory::EnemyPatternFactory& operator=(const factory::EnemyPatternFactory&);
-	
+    EnemyPatternFactory(const factory::EnemyPatternFactory&);
+    const factory::EnemyPatternFactory& operator=(const factory::EnemyPatternFactory&);
+    
 public:
-	explicit EnemyPatternFactory(const enemyIO::EnemyFile*);
-	~EnemyPatternFactory(void);
-	
+    explicit EnemyPatternFactory(const enemyIO::EnemyFile*);
+    ~EnemyPatternFactory(void);
+    
 public:
-	enemyutil::EnemyPattern* createEnemyPattern(std::string);
+    enemyutil::EnemyPattern* createEnemyPattern(std::string);
 };
 
 #endif // ___ENEMY_PATTERN_FACTORY_H

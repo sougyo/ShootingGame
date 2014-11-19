@@ -2,21 +2,21 @@
 #define ___ENEMY_DECLARATION_H
 
 namespace enemyutil {
-	class Enemy;
-	class EnemyElement;
-	class EnemyPattern;
-	struct EnemyPatternElement;
+    class Enemy;
+    class EnemyElement;
+    class EnemyPattern;
+    struct EnemyPatternElement;
 }
 
 namespace enemyIO {
-	class EnemyFile;
-	class EnemyFileElement;
-	class EnemyFileReader;
+    class EnemyFile;
+    class EnemyFileElement;
+    class EnemyFileReader;
 }
 
 namespace factory {
-	class EnemyFactory;
-	class EnemyPatternFactory;
+    class EnemyFactory;
+    class EnemyPatternFactory;
 }
 
 #endif // ___ENEMY_DECLARATION_H

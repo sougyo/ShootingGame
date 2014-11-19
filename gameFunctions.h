@@ -9,9 +9,9 @@
 #include "ImageFactory.h"
 
 namespace gameutil {
-	bool checkCollision(gameutil::Moveable*, gameutil::Moveable*, int);
-	bool checkCollision(gameutil::Moveable*, gamesystem::Fighter*, int);
-	void drawNowLoadingImage(void);
+    bool checkCollision(gameutil::Moveable*, gameutil::Moveable*, int);
+    bool checkCollision(gameutil::Moveable*, gamesystem::Fighter*, int);
+    void drawNowLoadingImage(void);
 }
 
 #endif // ___GAME_FUNCTIONS_H

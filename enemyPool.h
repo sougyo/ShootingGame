@@ -4,20 +4,20 @@
 #include "pool.h"
 
 namespace enemyutil {
-	class EnemyPool;
+    class EnemyPool;
 }
 
 class enemyutil::EnemyPool : public gameutil::Pool {
 private:
-	EnemyPool(const enemyutil::EnemyPool&);
-	const enemyutil::EnemyPool& operator=(const enemyutil::EnemyPool&);
-	
+    EnemyPool(const enemyutil::EnemyPool&);
+    const enemyutil::EnemyPool& operator=(const enemyutil::EnemyPool&);
+    
 public:
-	EnemyPool(void);
-	~EnemyPool(void);
-	
+    EnemyPool(void);
+    ~EnemyPool(void);
+    
 public:
-	void move(void);
+    void move(void);
 };
 
 #endif // ___ENEMY_POOL_H

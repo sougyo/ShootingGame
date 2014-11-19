@@ -9,22 +9,22 @@
 
 class missileutil::MissileSetController {
 private:
-	int index;
-	int count;
-	std::vector<missileutil::MissileSet*> missileSets;
-	
+    int index;
+    int count;
+    std::vector<missileutil::MissileSet*> missileSets;
+    
 private:
-	MissileSetController(const missileutil::MissileSetController&);
-	const missileutil::MissileSetController& operator=(const missileutil::MissileSetController&);
-	
+    MissileSetController(const missileutil::MissileSetController&);
+    const missileutil::MissileSetController& operator=(const missileutil::MissileSetController&);
+    
 public:
-	MissileSetController(missileIO::MissileFile* missileFile, int);
-	~MissileSetController(void);
-	
+    MissileSetController(missileIO::MissileFile* missileFile, int);
+    ~MissileSetController(void);
+    
 public:
-	void fire(int);
-	void move(void);
-	inline int getSize(void) const { return static_cast<int>(missileSets.size()); }
+    void fire(int);
+    void move(void);
+    inline int getSize(void) const { return static_cast<int>(missileSets.size()); }
 };
 
 #endif // ___MISSILE_SET_CONTROLLER

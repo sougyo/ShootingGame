@@ -8,26 +8,26 @@
 #include "random.h"
 
 namespace gameutil {
-	class FileWriter;
+    class FileWriter;
 }
 
 class gameutil::FileWriter {
 private:
-	std::string fileName;
-	
+    std::string fileName;
+    
 private:
-	FileWriter(const gameutil::FileWriter&);
-	const gameutil::FileWriter& operator=(const gameutil::FileWriter&);
-	
+    FileWriter(const gameutil::FileWriter&);
+    const gameutil::FileWriter& operator=(const gameutil::FileWriter&);
+    
 public:
-	FileWriter(std::string);
-	~FileWriter(void);
-	
+    FileWriter(std::string);
+    ~FileWriter(void);
+    
 public:
-	void write(std::string);
-	
+    void write(std::string);
+    
 private:
-	void encrypt(std::string&);
+    void encrypt(std::string&);
 
 };
 

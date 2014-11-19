@@ -8,20 +8,20 @@
 #include "itemKindMap.h"
 
 namespace factory {
-	class ItemFactory;
+    class ItemFactory;
 }
 
 class factory::ItemFactory {
 private:
-	ItemFactory(const factory::ItemFactory&);
-	const factory::ItemFactory& operator=(const factory::ItemFactory&);
-	
+    ItemFactory(const factory::ItemFactory&);
+    const factory::ItemFactory& operator=(const factory::ItemFactory&);
+    
 public:
-	ItemFactory(void);
-	~ItemFactory(void);
-	
+    ItemFactory(void);
+    ~ItemFactory(void);
+    
 public:
-	itemutil::Item* createItem(std::string);
+    itemutil::Item* createItem(std::string);
 };
 
 #endif // ___ITEM_FACTORY_H

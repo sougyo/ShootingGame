@@ -7,23 +7,23 @@
 #include "fileReader.h"
 
 namespace interpreterIO {
-	class InterpreterFileReader;
+    class InterpreterFileReader;
 }
 
 class interpreterIO::InterpreterFileReader : public gameutil::FileReader {
 private:
-	InterpreterFileReader(const interpreterIO::InterpreterFileReader&);
-	const interpreterIO::InterpreterFileReader operator=(const interpreterIO::InterpreterFileReader&);
-	
+    InterpreterFileReader(const interpreterIO::InterpreterFileReader&);
+    const interpreterIO::InterpreterFileReader operator=(const interpreterIO::InterpreterFileReader&);
+    
 private:
-	explicit InterpreterFileReader(const char*);
-	
+    explicit InterpreterFileReader(const char*);
+    
 public:
-	InterpreterFileReader(const char*, const char*);
-	~InterpreterFileReader(void);
-	
+    InterpreterFileReader(const char*, const char*);
+    ~InterpreterFileReader(void);
+    
 public:
-	interpreterIO::InterpreterFile* createInterpreterFile(void);
+    interpreterIO::InterpreterFile* createInterpreterFile(void);
 };
 
 #endif // ___INTERPRETER_FILE_READER_H

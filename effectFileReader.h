@@ -7,26 +7,26 @@
 #include "fileReader.h"
 
 namespace effectIO {
-	class EffectFileReader;
+    class EffectFileReader;
 }
 
 class effectIO::EffectFileReader : public gameutil::FileReader {
 private:
-	EffectFileReader(const effectIO::EffectFileReader&);
-	const effectIO::EffectFileReader& operator=(const effectIO::EffectFileReader&);
+    EffectFileReader(const effectIO::EffectFileReader&);
+    const effectIO::EffectFileReader& operator=(const effectIO::EffectFileReader&);
 
 private:
-	explicit EffectFileReader(const char*);
+    explicit EffectFileReader(const char*);
 
 public:
-	EffectFileReader(const char*, const char*);
-	~EffectFileReader(void);
-	
+    EffectFileReader(const char*, const char*);
+    ~EffectFileReader(void);
+    
 public:
-	effectIO::EffectFile* createEffectFile(void);
-	
+    effectIO::EffectFile* createEffectFile(void);
+    
 private:
-	std::string analyzeEffectString(void);
+    std::string analyzeEffectString(void);
 };
 
 #endif // ___EFFECT_FILE_READER_H

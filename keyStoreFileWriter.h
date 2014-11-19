@@ -8,20 +8,20 @@
 #include "keyStoreFile.h"
 
 namespace gamesystemIO {
-	class KeyStoreFileWriter;
+    class KeyStoreFileWriter;
 }
 
 class gamesystemIO::KeyStoreFileWriter : public gameutil::FileWriter {
 private:
-	KeyStoreFileWriter(const gamesystemIO::KeyStoreFileWriter&);
-	const gamesystemIO::KeyStoreFileWriter& operator=(const gamesystemIO::KeyStoreFileWriter&);
-	
+    KeyStoreFileWriter(const gamesystemIO::KeyStoreFileWriter&);
+    const gamesystemIO::KeyStoreFileWriter& operator=(const gamesystemIO::KeyStoreFileWriter&);
+    
 public:
-	KeyStoreFileWriter(std::string);
-	~KeyStoreFileWriter(void);
-	
+    KeyStoreFileWriter(std::string);
+    ~KeyStoreFileWriter(void);
+    
 public:
-	void write(gamesystemIO::KeyStoreFile&);
+    void write(gamesystemIO::KeyStoreFile&);
 };
 
 

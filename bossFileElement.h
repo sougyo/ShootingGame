@@ -4,27 +4,27 @@
 #include <string>
 
 namespace bossIO {
-	class BossFileElement;
+    class BossFileElement;
 }
 
 class bossIO::BossFileElement {
 private:
-	int limit;
-	std::string techniqueImageFileName;
-	std::string enemyName;
-	
+    int limit;
+    std::string techniqueImageFileName;
+    std::string enemyName;
+    
 private:
-	BossFileElement(const bossIO::BossFileElement&);
-	const bossIO::BossFileElement& operator=(const bossIO::BossFileElement&);
-	
+    BossFileElement(const bossIO::BossFileElement&);
+    const bossIO::BossFileElement& operator=(const bossIO::BossFileElement&);
+    
 public:
-	BossFileElement(int, std::string, std::string);
-	~BossFileElement(void);
-	
+    BossFileElement(int, std::string, std::string);
+    ~BossFileElement(void);
+    
 public:
-	inline int getLimit(void) const { return limit; }
-	inline const std::string& getTechniqueImageFileName(void) const { return techniqueImageFileName; }
-	inline const std::string& getEnemyName(void) const { return enemyName; }
+    inline int getLimit(void) const { return limit; }
+    inline const std::string& getTechniqueImageFileName(void) const { return techniqueImageFileName; }
+    inline const std::string& getEnemyName(void) const { return enemyName; }
 };
 
 #endif // ___BOSS_FILE_ELEMENT_H

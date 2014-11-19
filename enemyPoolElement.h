@@ -6,29 +6,29 @@
 #include "table.h"
 
 namespace enemyutil {
-	class EnemyPoolElement;
+    class EnemyPoolElement;
 }
 
 class enemyutil::EnemyPoolElement : public gameutil::PoolElement {
 public:
-	static gameutil::Table<enemyutil::Enemy>* enemyTable;
-	
+    static gameutil::Table<enemyutil::Enemy>* enemyTable;
+    
 private:
-	enemyutil::Enemy* enemy;
-	int x;
-	int y;
+    enemyutil::Enemy* enemy;
+    int x;
+    int y;
 
 private:
-	EnemyPoolElement(const enemyutil::EnemyPoolElement&);
-	const enemyutil::EnemyPoolElement& operator=(const enemyutil::EnemyPoolElement&);
-	
+    EnemyPoolElement(const enemyutil::EnemyPoolElement&);
+    const enemyutil::EnemyPoolElement& operator=(const enemyutil::EnemyPoolElement&);
+    
 public:
-	EnemyPoolElement(enemyutil::Enemy*, int, int, int);
-	~EnemyPoolElement(void);
-	
+    EnemyPoolElement(enemyutil::Enemy*, int, int, int);
+    ~EnemyPoolElement(void);
+    
 public:
-	void execute(void);
-	bool isActive(void);
+    void execute(void);
+    bool isActive(void);
 };
 
 #endif // ___ENEMY_POOL_ELEMENT_H

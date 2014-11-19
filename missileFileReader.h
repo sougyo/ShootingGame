@@ -11,24 +11,24 @@
 
 class missileIO::MissileFileReader : public gameutil::FileReader {
 private:
-	MissileFileReader(const missileIO::MissileFileReader&);
-	const missileIO::MissileFileReader& operator=(const missileIO::MissileFileReader&);
+    MissileFileReader(const missileIO::MissileFileReader&);
+    const missileIO::MissileFileReader& operator=(const missileIO::MissileFileReader&);
 
 private:
-	explicit MissileFileReader(const char*);
+    explicit MissileFileReader(const char*);
 
 public:
-	MissileFileReader(const char*, const char*);
-	~MissileFileReader(void);
-	
+    MissileFileReader(const char*, const char*);
+    ~MissileFileReader(void);
+    
 public:
-	missileIO::MissileFile* createMissileFile(void);
-	
+    missileIO::MissileFile* createMissileFile(void);
+    
 private:
-	int analyzeInterval(void);
-	std::string analyzeImageFileName(void);
-	std::string analyzeInitialStateString(void);
-	std::string analyzeMovePatternString(void);
+    int analyzeInterval(void);
+    std::string analyzeImageFileName(void);
+    std::string analyzeInitialStateString(void);
+    std::string analyzeMovePatternString(void);
 };
 
 #endif // ___MISSILE_FILE_READER_H

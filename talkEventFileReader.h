@@ -10,20 +10,20 @@
 #include "ImageFactory.h"
 
 namespace talkeventutil {
-	class TalkEventFileReader;
+    class TalkEventFileReader;
 }
 
 class talkeventutil::TalkEventFileReader : public gameutil::FileReader {
 private:
-	TalkEventFileReader(const talkeventutil::TalkEventFileReader&);
-	const talkeventutil::TalkEventFileReader& operator=(const talkeventutil::TalkEventFileReader&);
-	
+    TalkEventFileReader(const talkeventutil::TalkEventFileReader&);
+    const talkeventutil::TalkEventFileReader& operator=(const talkeventutil::TalkEventFileReader&);
+    
 public:
-	TalkEventFileReader(const char*, const char*);
-	~TalkEventFileReader(void);
-	
+    TalkEventFileReader(const char*, const char*);
+    ~TalkEventFileReader(void);
+    
 public:
-	talkeventutil::TalkEvent* createTalkEvent(void);
+    talkeventutil::TalkEvent* createTalkEvent(void);
 };
 
 #endif //___TALK_EVENT_FILE_READER_H

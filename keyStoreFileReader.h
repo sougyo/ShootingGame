@@ -9,20 +9,20 @@
 #include "gameInformation.h"
 
 namespace gamesystemIO {
-	class KeyStoreFileReader;
+    class KeyStoreFileReader;
 }
 
 class gamesystemIO::KeyStoreFileReader : public gameutil::FileReader {
 private:
-	KeyStoreFileReader(const gamesystemIO::KeyStoreFileReader&);
-	const gamesystemIO::KeyStoreFileReader& operator=(const gamesystemIO::KeyStoreFileReader&);
-	
+    KeyStoreFileReader(const gamesystemIO::KeyStoreFileReader&);
+    const gamesystemIO::KeyStoreFileReader& operator=(const gamesystemIO::KeyStoreFileReader&);
+    
 public:
-	KeyStoreFileReader(const char*);
-	~KeyStoreFileReader(void);
-	
+    KeyStoreFileReader(const char*);
+    ~KeyStoreFileReader(void);
+    
 public:
-	gamesystemIO::KeyStoreFile* createKeyStoreFile(void);
+    gamesystemIO::KeyStoreFile* createKeyStoreFile(void);
 };
 
 #endif // ___KEY_STORE_FILE_READER_H

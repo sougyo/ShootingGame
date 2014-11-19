@@ -8,26 +8,26 @@
 #include "imagePatternElement.h"
 
 namespace gameutil {
-	class ImagePattern;
+    class ImagePattern;
 }
 
 class gameutil::ImagePattern {
 private:
-	int currentTime;
-	std::vector<gameutil::ImagePatternElement*> imagePatternElements;
-	
+    int currentTime;
+    std::vector<gameutil::ImagePatternElement*> imagePatternElements;
+    
 private:
-	ImagePattern(const gameutil::ImagePattern&);
-	const gameutil::ImagePattern& operator=(const gameutil::ImagePattern&);
-	
+    ImagePattern(const gameutil::ImagePattern&);
+    const gameutil::ImagePattern& operator=(const gameutil::ImagePattern&);
+    
 public:
-	ImagePattern(void);
-	~ImagePattern(void);
-	
+    ImagePattern(void);
+    ~ImagePattern(void);
+    
 public:
-	void addImagePatternElement(gameutil::Images*, int);
-	graphics::Image* getImage(int&, int);
-	inline int getSize(void) const { return static_cast<int>(imagePatternElements.size()); }
+    void addImagePatternElement(gameutil::Images*, int);
+    graphics::Image* getImage(int&, int);
+    inline int getSize(void) const { return static_cast<int>(imagePatternElements.size()); }
 };
 
 

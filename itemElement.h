@@ -12,36 +12,36 @@
 
 class itemutil::ItemElement : public gameutil::Moveable {
 private:
-	itemutil::Item* owner;
+    itemutil::Item* owner;
 
 private:
-	static gameutil::MovePattern movePattern;
-	
+    static gameutil::MovePattern movePattern;
+    
 private:
-	const itemutil::ItemKind* itemKind;
+    const itemutil::ItemKind* itemKind;
 
 private:
-	ItemElement(const itemutil::ItemElement&);
-	const itemutil::ItemElement& operator=(const itemutil::ItemElement&);
+    ItemElement(const itemutil::ItemElement&);
+    const itemutil::ItemElement& operator=(const itemutil::ItemElement&);
 
 public:
-	ItemElement(itemutil::Item*, double, double, const itemutil::ItemKind*);
-	~ItemElement(void);
-	
+    ItemElement(itemutil::Item*, double, double, const itemutil::ItemKind*);
+    ~ItemElement(void);
+    
 public:
-	void fire(int, int);
-	void move(void);
-	void draw(void);
-	void checkCollision(gamesystem::Fighter*);
-	
-	inline int getRadius(void) const { return static_cast<int>(itemKind->getImage()->getRadius() * 2.0); }
-	inline const itemutil::ItemKind* getItemKind(void) const { return itemKind; }
-	
+    void fire(int, int);
+    void move(void);
+    void draw(void);
+    void checkCollision(gamesystem::Fighter*);
+    
+    inline int getRadius(void) const { return static_cast<int>(itemKind->getImage()->getRadius() * 2.0); }
+    inline const itemutil::ItemKind* getItemKind(void) const { return itemKind; }
+    
 private:
-	void toInactive(void);
-	
+    void toInactive(void);
+    
 public:
-	static int count;
+    static int count;
 };
 
 #endif // ___ITEM_ELEMENT_H

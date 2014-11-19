@@ -14,25 +14,25 @@
 #include "enemyFileReader.h"
 
 namespace factory {
-	class EnemyPoolFactory;
+    class EnemyPoolFactory;
 }
 
 class factory::EnemyPoolFactory {
 private:
-	EnemyPoolFactory(const factory::EnemyPoolFactory&);
-	const factory::EnemyPoolFactory& operator=(const factory::EnemyPoolFactory&);
-	
+    EnemyPoolFactory(const factory::EnemyPoolFactory&);
+    const factory::EnemyPoolFactory& operator=(const factory::EnemyPoolFactory&);
+    
 public:
-	EnemyPoolFactory(void);
-	~EnemyPoolFactory(void);
-	
+    EnemyPoolFactory(void);
+    ~EnemyPoolFactory(void);
+    
 public:
-	enemyutil::EnemyPool* createEnemyPool(std::string, std::string);
-	
+    enemyutil::EnemyPool* createEnemyPool(std::string, std::string);
+    
 private:
-	std::vector<enemyIO::EnemyFile*>* createEnemyFiles(std::string);
-	enemyutil::Enemy* createEnemy(std::string, std::vector<enemyIO::EnemyFile*>*);
-	enemyutil::EnemyPool* createEnemyPool(std::string, std::vector<enemyIO::EnemyFile*>*);
+    std::vector<enemyIO::EnemyFile*>* createEnemyFiles(std::string);
+    enemyutil::Enemy* createEnemy(std::string, std::vector<enemyIO::EnemyFile*>*);
+    enemyutil::EnemyPool* createEnemyPool(std::string, std::vector<enemyIO::EnemyFile*>*);
 };
 
 #endif // ___ENEMY_POOL_FACTORY_H

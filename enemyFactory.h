@@ -22,19 +22,19 @@
 
 class factory::EnemyFactory {
 private:
-	EnemyFactory(const factory::EnemyFactory&);
-	factory::EnemyFactory& operator=(const factory::EnemyFactory&);
-	
+    EnemyFactory(const factory::EnemyFactory&);
+    factory::EnemyFactory& operator=(const factory::EnemyFactory&);
+    
 public:
-	EnemyFactory(void);
-	~EnemyFactory(void);
+    EnemyFactory(void);
+    ~EnemyFactory(void);
 
 public:
-	enemyutil::Enemy* createEnemy(const enemyIO::EnemyFile*, const enemyIO::EnemyFileElement&);
+    enemyutil::Enemy* createEnemy(const enemyIO::EnemyFile*, const enemyIO::EnemyFileElement&);
 
 private:
-	int countLine(std::string);
-	void analyzeInitialState(std::string, enemyutil::Enemy*);
+    int countLine(std::string);
+    void analyzeInitialState(std::string, enemyutil::Enemy*);
 };
 
 #endif // ___ENEMY_FACTORY_H

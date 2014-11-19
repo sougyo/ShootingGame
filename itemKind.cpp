@@ -12,11 +12,11 @@ ItemKind::~ItemKind(void) {
 }
 
 void ItemKind::caughtProcess(itemutil::ItemElement* itemElement) const {
-	func(*gameInformation, itemElement);
+    func(*gameInformation, itemElement);
 }
 
 Image* ItemKind::getImage(void) const {
-	if (gameInformation->isFullPower() && image2 != 0)
-		return image2;
-	return image1;
+    if (gameInformation->isFullPower() && image2 != 0)
+        return image2;
+    return image1;
 }

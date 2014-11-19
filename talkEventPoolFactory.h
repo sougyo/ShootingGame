@@ -13,23 +13,23 @@
 #include "gameInformation.h"
 
 namespace factory {
-	class TalkEventPoolFactory;
+    class TalkEventPoolFactory;
 }
 
 class factory::TalkEventPoolFactory {
 private:
-	TalkEventPoolFactory(const factory::TalkEventPoolFactory&);
-	const factory::TalkEventPoolFactory& operator=(const factory::TalkEventPoolFactory&);
-	
+    TalkEventPoolFactory(const factory::TalkEventPoolFactory&);
+    const factory::TalkEventPoolFactory& operator=(const factory::TalkEventPoolFactory&);
+    
 public:
-	TalkEventPoolFactory(void);
-	~TalkEventPoolFactory(void);
-	
+    TalkEventPoolFactory(void);
+    ~TalkEventPoolFactory(void);
+    
 public:
-	talkeventutil::TalkEventPool* createTalkEventPool(std::string, gamesystem::GameInformation::PlayerType);
-	
+    talkeventutil::TalkEventPool* createTalkEventPool(std::string, gamesystem::GameInformation::PlayerType);
+    
 private:
-	talkeventutil::TalkEvent* createTalkEvent(std::string, gamesystem::GameInformation::PlayerType);
+    talkeventutil::TalkEvent* createTalkEvent(std::string, gamesystem::GameInformation::PlayerType);
 };
 
 #endif // ___TALK_EVENT_POOL_FACTORY_H

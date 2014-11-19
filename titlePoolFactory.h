@@ -16,23 +16,23 @@
 #include "titlePoolElement.h"
 
 namespace factory {
-	class TitlePoolFactory;
+    class TitlePoolFactory;
 }
 
 class factory::TitlePoolFactory {
 private:
-	TitlePoolFactory(const factory::TitlePoolFactory&);
-	const factory::TitlePoolFactory& operator=(const factory::TitlePoolFactory&);
-	
+    TitlePoolFactory(const factory::TitlePoolFactory&);
+    const factory::TitlePoolFactory& operator=(const factory::TitlePoolFactory&);
+    
 public:
-	TitlePoolFactory(void);
-	~TitlePoolFactory(void);
-	
+    TitlePoolFactory(void);
+    ~TitlePoolFactory(void);
+    
 public:
-	titleutil::TitlePool* createTitlePool(std::string);
-	
+    titleutil::TitlePool* createTitlePool(std::string);
+    
 private:
-	labelutil::Label* createLabel(std::string, std::string);
+    labelutil::Label* createLabel(std::string, std::string);
 };
 
 #endif // ___TITLE_POOL_FACTORY_H

@@ -16,17 +16,17 @@ KeyStoreFileWriter::~KeyStoreFileWriter(void) {
 }
 
 void KeyStoreFileWriter::write(KeyStoreFile& keyStoreFile) {
-	ostringstream out;
+    ostringstream out;
 
-	out << keyStoreFile.getStageNo() << ' ';
-	out << keyStoreFile.getStageType() << ' ';
-	out << keyStoreFile.getPlayerType();
-	out << "\n";
-	out << "NAME:" + keyStoreFile.getName() + "\n";
-	
-	KeyStore keyStore = keyStoreFile.getKeyStore();
-	for (int i = 0; i < keyStore.getSize(); i++)
-		out << keyStore.getKeyStoreElement(i).getUChar();
-		
-	FileWriter::write(out.str());
+    out << keyStoreFile.getStageNo() << ' ';
+    out << keyStoreFile.getStageType() << ' ';
+    out << keyStoreFile.getPlayerType();
+    out << "\n";
+    out << "NAME:" + keyStoreFile.getName() + "\n";
+    
+    KeyStore keyStore = keyStoreFile.getKeyStore();
+    for (int i = 0; i < keyStore.getSize(); i++)
+        out << keyStore.getKeyStoreElement(i).getUChar();
+        
+    FileWriter::write(out.str());
 }

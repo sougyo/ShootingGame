@@ -9,20 +9,20 @@
 #include "constantField.h"
 
 namespace gamesystemIO {
-	class ScoreFileWriter;
+    class ScoreFileWriter;
 }
 
 class gamesystemIO::ScoreFileWriter : public gameutil::FileWriter {
 private:
-	ScoreFileWriter(const gamesystemIO::ScoreFileWriter&);
-	const gamesystemIO::ScoreFileWriter& operator=(const gamesystemIO::ScoreFileWriter&);
+    ScoreFileWriter(const gamesystemIO::ScoreFileWriter&);
+    const gamesystemIO::ScoreFileWriter& operator=(const gamesystemIO::ScoreFileWriter&);
 
 public:
-	ScoreFileWriter(const char*);
-	~ScoreFileWriter(void);
-	
+    ScoreFileWriter(const char*);
+    ~ScoreFileWriter(void);
+    
 public:
-	void write(gamesystemIO::ScoreFile&);
+    void write(gamesystemIO::ScoreFile&);
 };
 
 #endif // ___SCORE_FILE_WRITER_H

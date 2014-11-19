@@ -15,20 +15,20 @@ InterpreterFileReader::~InterpreterFileReader() {
 }
 
 InterpreterFile* InterpreterFileReader::createInterpreterFile(void) {
-	string temp;
-	temp = readLine();
-	assert( temp == "EnemyFiles{" );
-	
-	string enemyFilesString;
-	while ( (temp = readLine()) != "}" )
-		enemyFilesString.append(temp).append("\n");
-	
-	temp = readLine();
-	assert(temp == "Interpreter{");
-	
-	string interpreterString;
-	while ( (temp = readLine()) != "}" )
-		interpreterString.append(temp).append("\n");
-	
-	return new InterpreterFile(enemyFilesString, interpreterString);
+    string temp;
+    temp = readLine();
+    assert( temp == "EnemyFiles{" );
+    
+    string enemyFilesString;
+    while ( (temp = readLine()) != "}" )
+        enemyFilesString.append(temp).append("\n");
+    
+    temp = readLine();
+    assert(temp == "Interpreter{");
+    
+    string interpreterString;
+    while ( (temp = readLine()) != "}" )
+        interpreterString.append(temp).append("\n");
+    
+    return new InterpreterFile(enemyFilesString, interpreterString);
 }

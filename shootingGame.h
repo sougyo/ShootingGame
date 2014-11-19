@@ -41,76 +41,76 @@
 #include "BackgroundController.h"
 
 namespace gamesystem {
-	class ShootingGame;
+    class ShootingGame;
 }
 
 class gamesystem::ShootingGame {
 private:
-	static gamesystem::ShootingGame singleton;
-	
+    static gamesystem::ShootingGame singleton;
+    
 private:
-	gameutil::PoolScheduler* poolScheduler;
-	gameutil::Table<bulletutil::Bullet> bulletTable;
-	gameutil::Table<enemyutil::Enemy> enemyTable;
-	gameutil::Table<itemutil::Item> itemTable;
-	gameutil::Table<missileutil::Missile> missileTable;
-	gameutil::Table<effectutil::Effect> effectTable;
-	gameutil::Table<bossutil::Boss> bossTable;
-	gameutil::Table<enemyutil::Enemy> bossEnemyTable;
-	gameutil::Table<labelutil::Label> labelTable;
-	gameutil::Table<bombutil::Bomb> bombTable;
-	gameutil::Table<talkeventutil::TalkEvent> talkEventTable;
-	gamesystem::Fighter* fighter;
-	effectutil::EffectPool* enemyEffectPool;
-	effectutil::EffectPool* bulletEffectPool;
-	effectutil::EffectPool* fighterEffectPool;
-	effectutil::EffectPool* fighterCollisionEffectPool;
-	effectutil::EffectPool* clearEffectPool;
-	gamesystem::GameInformation* gameInformation;
-	gamesystem::KeyStore keyStore;
-	gamesystem::Pause* pause;
-	gamesystem::Continue* continue_;
-	gamesoundutil::DirectSound* directSound;
-	labelutil::Label* missLabel;
-	background::BackgroundController* backGround;
-	bool isActive_;
-	
+    gameutil::PoolScheduler* poolScheduler;
+    gameutil::Table<bulletutil::Bullet> bulletTable;
+    gameutil::Table<enemyutil::Enemy> enemyTable;
+    gameutil::Table<itemutil::Item> itemTable;
+    gameutil::Table<missileutil::Missile> missileTable;
+    gameutil::Table<effectutil::Effect> effectTable;
+    gameutil::Table<bossutil::Boss> bossTable;
+    gameutil::Table<enemyutil::Enemy> bossEnemyTable;
+    gameutil::Table<labelutil::Label> labelTable;
+    gameutil::Table<bombutil::Bomb> bombTable;
+    gameutil::Table<talkeventutil::TalkEvent> talkEventTable;
+    gamesystem::Fighter* fighter;
+    effectutil::EffectPool* enemyEffectPool;
+    effectutil::EffectPool* bulletEffectPool;
+    effectutil::EffectPool* fighterEffectPool;
+    effectutil::EffectPool* fighterCollisionEffectPool;
+    effectutil::EffectPool* clearEffectPool;
+    gamesystem::GameInformation* gameInformation;
+    gamesystem::KeyStore keyStore;
+    gamesystem::Pause* pause;
+    gamesystem::Continue* continue_;
+    gamesoundutil::DirectSound* directSound;
+    labelutil::Label* missLabel;
+    background::BackgroundController* backGround;
+    bool isActive_;
+    
 private:
-	ShootingGame(const gamesystem::ShootingGame&);
-	const gamesystem::ShootingGame& operator=(const gamesystem::ShootingGame&);
-	ShootingGame(void);
-	~ShootingGame(void);
+    ShootingGame(const gamesystem::ShootingGame&);
+    const gamesystem::ShootingGame& operator=(const gamesystem::ShootingGame&);
+    ShootingGame(void);
+    ~ShootingGame(void);
 
 private:
-	graphics::Image* activeImage;
-	graphics::Image* inactiveImage;
-	graphics::Image* sideBlackImage;
-	graphics::Image* updownBlackImage;
-	
+    graphics::Image* activeImage;
+    graphics::Image* inactiveImage;
+    graphics::Image* sideBlackImage;
+    graphics::Image* updownBlackImage;
+    
 public:
-	static gamesystem::ShootingGame* getInstance(void) { return &singleton; }
-	
+    static gamesystem::ShootingGame* getInstance(void) { return &singleton; }
+    
 public:
-	void initializeMain(void);
-	void initialize(gamesystem::GameInformation* gameInformation);
-	void clean(void);
-	void moveOneFrame(void);
-	void draw(void);
-	void setKeyData(gamesystem::KeyStoreElement);
-	inline bool isActive(void) const { return isActive_; }
-	inline gamesystem::KeyStore getKeyStore(void) const { return keyStore; }
-	
+    void initializeMain(void);
+    void initialize(gamesystem::GameInformation* gameInformation);
+    void clean(void);
+    void moveOneFrame(void);
+    void draw(void);
+    void setKeyData(gamesystem::KeyStoreElement);
+    inline bool isActive(void) const { return isActive_; }
+    inline gamesystem::KeyStore getKeyStore(void) const { return keyStore; }
+    
 private:
-	void move(void);
-	void checkCollision(void);
-	void initializeTable(void);
-	void initializeImage(void);
-	void initializeClass(void);
-	void initializeEffect(void);
-	void clearTable(void);
-	gameutil::PoolScheduler* createPoolScheduler(std::string);
-	gamesystem::Fighter* createFighter(std::string);
-	labelutil::Label* createLabel(std::string);
+    void move(void);
+    void checkCollision(void);
+    void initializeTable(void);
+    void initializeImage(void);
+    void initializeClass(void);
+    void initializeEffect(void);
+    void clearTable(void);
+    gameutil::PoolScheduler* createPoolScheduler(std::string);
+    gamesystem::Fighter* createFighter(std::string);
+    labelutil::Label* createLabel(std::string);
 };
 
 #endif // ___SHOOTING_GAME_H

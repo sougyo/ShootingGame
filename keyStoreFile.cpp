@@ -6,11 +6,11 @@ using gamesystem::GameInformation;
 using gamesystem::KeyStore;
 
 KeyStoreFile::KeyStoreFile(int stageNo, GameInformation::StageType stageType, GameInformation::PlayerType playerType, string name, KeyStore keyStore)
-		: keyStore(keyStore) {
-	this->stageNo = stageNo;
-	this->stageType = stageType;
-	this->playerType = playerType;
-	this->name = name;
+        : keyStore(keyStore) {
+    this->stageNo = stageNo;
+    this->stageType = stageType;
+    this->playerType = playerType;
+    this->name = name;
 }
 
 KeyStoreFile::~KeyStoreFile(void) {

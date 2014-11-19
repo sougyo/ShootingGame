@@ -11,20 +11,20 @@
 #include "ImageFactory.h"
 
 namespace factory {
-	class BossFactory;
+    class BossFactory;
 }
 
 class factory::BossFactory {
 private:
-	BossFactory(const factory::BossFactory&);
-	const factory::BossFactory& operator=(const factory::BossFactory&);
-	
+    BossFactory(const factory::BossFactory&);
+    const factory::BossFactory& operator=(const factory::BossFactory&);
+    
 public:
-	BossFactory(void);
-	~BossFactory(void);
-	
+    BossFactory(void);
+    ~BossFactory(void);
+    
 public:
-	bossutil::Boss* createBoss(const bossIO::BossFile*);
+    bossutil::Boss* createBoss(const bossIO::BossFile*);
 };
 
 #endif // ___BOSS_FACTORY_H

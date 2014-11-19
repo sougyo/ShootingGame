@@ -12,24 +12,24 @@
 #include "ImageFactory.h"
 
 namespace factory {
-	class LabelFactory;
+    class LabelFactory;
 }
 
 class factory::LabelFactory {
 private:
-	LabelFactory(const factory::LabelFactory&);
-	const factory::LabelFactory& operator=(const factory::LabelFactory&);
-	
+    LabelFactory(const factory::LabelFactory&);
+    const factory::LabelFactory& operator=(const factory::LabelFactory&);
+    
 public:
-	~LabelFactory(void);
-	LabelFactory(void);
-	
+    ~LabelFactory(void);
+    LabelFactory(void);
+    
 public:
-	labelutil::Label* createLabel(const labelIO::LabelFile&);
-	labelutil::Label* createLabel(const labelIO::LabelFile&, graphics::Image*);
+    labelutil::Label* createLabel(const labelIO::LabelFile&);
+    labelutil::Label* createLabel(const labelIO::LabelFile&, graphics::Image*);
 
 private:
-	labelutil::LabelMovePattern* createLabelMovePattern(std::string);
+    labelutil::LabelMovePattern* createLabelMovePattern(std::string);
 };
 
 #endif // ___LABEL_FACTORY_H

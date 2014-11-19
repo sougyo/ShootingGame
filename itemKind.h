@@ -7,26 +7,26 @@
 
 class itemutil::ItemKind {
 public:
-	static gamesystem::GameInformation* gameInformation;
-	
+    static gamesystem::GameInformation* gameInformation;
+    
 private:
-	char kind;
-	void (*func)(gamesystem::GameInformation&, itemutil::ItemElement*);
-	graphics::Image* image1;
-	graphics::Image* image2;
-	
+    char kind;
+    void (*func)(gamesystem::GameInformation&, itemutil::ItemElement*);
+    graphics::Image* image1;
+    graphics::Image* image2;
+    
 private:
-	ItemKind(const itemutil::ItemKind&);
-	const itemutil::ItemKind& operator=(const itemutil::ItemKind&);
-	
+    ItemKind(const itemutil::ItemKind&);
+    const itemutil::ItemKind& operator=(const itemutil::ItemKind&);
+    
 public:
-	ItemKind(char, void (*func)(gamesystem::GameInformation&, itemutil::ItemElement*), graphics::Image*, graphics::Image*);
-	~ItemKind(void);
-	
+    ItemKind(char, void (*func)(gamesystem::GameInformation&, itemutil::ItemElement*), graphics::Image*, graphics::Image*);
+    ~ItemKind(void);
+    
 public:
-	void caughtProcess(itemutil::ItemElement*) const ;
-	graphics::Image* getImage(void) const;
-	inline char getKindChar(void) const { return kind; }
+    void caughtProcess(itemutil::ItemElement*) const ;
+    graphics::Image* getImage(void) const;
+    inline char getKindChar(void) const { return kind; }
 
 };
 

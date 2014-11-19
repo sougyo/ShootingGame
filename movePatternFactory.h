@@ -8,22 +8,22 @@
 #include "movePattern.h"
 
 namespace factory {
-	class MovePatternFactory;
+    class MovePatternFactory;
 }
 
 class factory::MovePatternFactory {
 private:
-	MovePatternFactory(factory::MovePatternFactory&);
-	factory::MovePatternFactory& operator=(factory::MovePatternFactory);
+    MovePatternFactory(factory::MovePatternFactory&);
+    factory::MovePatternFactory& operator=(factory::MovePatternFactory);
 
 public:
-	MovePatternFactory(void);
-	~MovePatternFactory(void);
-	gameutil::MovePattern* createMovePattern(std::string);
+    MovePatternFactory(void);
+    ~MovePatternFactory(void);
+    gameutil::MovePattern* createMovePattern(std::string);
 
 private:
-	std::string& changeAimToValue(std::string&);
-	std::string& changeHomingToValue(std::string&);
+    std::string& changeAimToValue(std::string&);
+    std::string& changeHomingToValue(std::string&);
 };
 
 #endif // ___MOVE_PATTERN_FACTORY_H

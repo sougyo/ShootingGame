@@ -2,20 +2,20 @@
 #define ___MISSILE_DECLARATION_H
 
 namespace missileutil {
-	class Missile;
-	class MissileElement;
-	class MissileSet;
-	class MissileSetController;
+    class Missile;
+    class MissileElement;
+    class MissileSet;
+    class MissileSetController;
 }
 
 namespace missileIO {
-	class MissileFile;
-	class MissileFileElement;
-	class MissileFileReader;
+    class MissileFile;
+    class MissileFileElement;
+    class MissileFileReader;
 }
 
 namespace factory {
-	class MissileSetFactory;
+    class MissileSetFactory;
 }
 
 #endif // ___MISSILE_DECLARATION_H

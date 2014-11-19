@@ -14,23 +14,23 @@
 #include "constantField.h"
 
 namespace factory {
-	class BossPoolFactory;
+    class BossPoolFactory;
 }
 
 class factory::BossPoolFactory {
 private:
-	BossPoolFactory(const factory::BossPoolFactory&);
-	const factory::BossPoolFactory& operator=(const factory::BossPoolFactory&);
-	
+    BossPoolFactory(const factory::BossPoolFactory&);
+    const factory::BossPoolFactory& operator=(const factory::BossPoolFactory&);
+    
 public:
-	BossPoolFactory(void);
-	~BossPoolFactory(void);
-	
+    BossPoolFactory(void);
+    ~BossPoolFactory(void);
+    
 public:
-	bossutil::BossPool* createBossPool(std::string);
-	
+    bossutil::BossPool* createBossPool(std::string);
+    
 private:
-	bossutil::Boss* createBoss(std::string);
+    bossutil::Boss* createBoss(std::string);
 };
 
 #endif // ___BOSS_POOL_FACTORY_H

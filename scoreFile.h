@@ -8,27 +8,27 @@
 #include "gameInformation.h"
 
 namespace gamesystemIO {
-	class ScoreFile;
+    class ScoreFile;
 }
 
 class gamesystemIO::ScoreFile {
 private:
-	std::map<int, gamesystemIO::ScoreStock*> scoreFileElements;
-	
+    std::map<int, gamesystemIO::ScoreStock*> scoreFileElements;
+    
 private:
-	ScoreFile(const gamesystemIO::ScoreFile&);
-	const gamesystemIO::ScoreFile& operator=(const gamesystemIO::ScoreFile&);
+    ScoreFile(const gamesystemIO::ScoreFile&);
+    const gamesystemIO::ScoreFile& operator=(const gamesystemIO::ScoreFile&);
 
 public:
-	ScoreFile(void);
-	~ScoreFile(void);
-	
+    ScoreFile(void);
+    ~ScoreFile(void);
+    
 public:
-	void addScore(int, gamesystem::GameInformation::StageType, gamesystem::GameInformation::PlayerType, std::string, int);
-	gamesystemIO::ScoreStock* getScoreStock(int, gamesystem::GameInformation::StageType, gamesystem::GameInformation::PlayerType);
-	
+    void addScore(int, gamesystem::GameInformation::StageType, gamesystem::GameInformation::PlayerType, std::string, int);
+    gamesystemIO::ScoreStock* getScoreStock(int, gamesystem::GameInformation::StageType, gamesystem::GameInformation::PlayerType);
+    
 private:
-	int makeKey(int, gamesystem::GameInformation::StageType, gamesystem::GameInformation::PlayerType);
+    int makeKey(int, gamesystem::GameInformation::StageType, gamesystem::GameInformation::PlayerType);
 };
 
 #endif // ___SCORE_FILE_H

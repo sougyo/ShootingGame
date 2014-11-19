@@ -6,25 +6,25 @@
 #include <vector>
 
 namespace effectIO {
-	class EffectFile;
+    class EffectFile;
 }
 
 class effectIO::EffectFile {
 private:
-	std::vector<std::string> effectElements;
-	
+    std::vector<std::string> effectElements;
+    
 private:
-	EffectFile(const effectIO::EffectFile&);
-	const effectIO::EffectFile& operator=(const effectIO::EffectFile&);
+    EffectFile(const effectIO::EffectFile&);
+    const effectIO::EffectFile& operator=(const effectIO::EffectFile&);
 
 public:
-	EffectFile(void);
-	~EffectFile(void);
+    EffectFile(void);
+    ~EffectFile(void);
 
 public:
-	void addEffectElement(std::string);
-	std::string getEffectString(int);
-	inline int getSize(void) const { return static_cast<int>(effectElements.size()); }
+    void addEffectElement(std::string);
+    std::string getEffectString(int);
+    inline int getSize(void) const { return static_cast<int>(effectElements.size()); }
 };
 
 #endif // ___EFFECT_FILE_H

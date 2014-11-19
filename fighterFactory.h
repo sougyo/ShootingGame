@@ -11,20 +11,20 @@
 #include "missileSetController.h"
 
 namespace factory {
-	class FighterFactory;
+    class FighterFactory;
 }
 
 class factory::FighterFactory {
 private:
-	FighterFactory(const factory::FighterFactory&);
-	const factory::FighterFactory& operator=(const factory::FighterFactory&);
-	
+    FighterFactory(const factory::FighterFactory&);
+    const factory::FighterFactory& operator=(const factory::FighterFactory&);
+    
 public:
-	FighterFactory(void);
-	~FighterFactory(void);
-	
+    FighterFactory(void);
+    ~FighterFactory(void);
+    
 public:
-	gamesystem::Fighter* createFighter(const gamesystemIO::FighterFile&);
+    gamesystem::Fighter* createFighter(const gamesystemIO::FighterFile&);
 };
 
 #endif // ___FIGHTER_FACTORY_H

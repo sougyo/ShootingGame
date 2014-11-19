@@ -9,20 +9,20 @@
 #include "gameInformation.h"
 
 namespace gamesystemIO {
-	class ScoreFileReader;
+    class ScoreFileReader;
 }
 
 class gamesystemIO::ScoreFileReader : public gameutil::FileReader {
 private:
-	ScoreFileReader(const gamesystemIO::ScoreFileReader&);
-	const gamesystemIO::ScoreFileReader& operator=(const gamesystemIO::ScoreFileReader&);
-	
+    ScoreFileReader(const gamesystemIO::ScoreFileReader&);
+    const gamesystemIO::ScoreFileReader& operator=(const gamesystemIO::ScoreFileReader&);
+    
 public:
-	ScoreFileReader(const char*);
-	~ScoreFileReader(void);
-	
+    ScoreFileReader(const char*);
+    ~ScoreFileReader(void);
+    
 public:
-	gamesystemIO::ScoreFile* createScoreFile(void);
+    gamesystemIO::ScoreFile* createScoreFile(void);
 };
 
 #endif // ___SCORE_FILE_READER_H

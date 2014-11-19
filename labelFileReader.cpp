@@ -12,27 +12,27 @@ LabelFileReader::~LabelFileReader(void) {
 }
 
 LabelFile* LabelFileReader::createLabelFile(void) {
-	string imageStr = readLine();
-	assert(!imageStr.find("Image:"));
-	imageStr = imageStr.substr(6);
-	
-	string isStr = readLine();
-	assert(!isStr.find("IS:"));
-	isStr = isStr.substr(3);
-	
-	string mpStr = analyzeMovePatternString();
-	
-	LabelFile* labelFile = new LabelFile(imageStr, isStr, mpStr);
-	
-	return labelFile;
+    string imageStr = readLine();
+    assert(!imageStr.find("Image:"));
+    imageStr = imageStr.substr(6);
+    
+    string isStr = readLine();
+    assert(!isStr.find("IS:"));
+    isStr = isStr.substr(3);
+    
+    string mpStr = analyzeMovePatternString();
+    
+    LabelFile* labelFile = new LabelFile(imageStr, isStr, mpStr);
+    
+    return labelFile;
 }
 
 string LabelFileReader::analyzeMovePatternString(void) {
-	string temp = readLine();
-	assert(!temp.find("MP{"));
-	
-	string buffer;
-	while ( (temp = readLine()) != "}" )
-		buffer.append(temp).append("\n");
-	return buffer;
+    string temp = readLine();
+    assert(!temp.find("MP{"));
+    
+    string buffer;
+    while ( (temp = readLine()) != "}" )
+        buffer.append(temp).append("\n");
+    return buffer;
 }

@@ -13,23 +13,23 @@
 #include "movePatternFactory.h"
 
 namespace factory {
-	class BulletFactory;
+    class BulletFactory;
 }
 
 class factory::BulletFactory {
 private:
-	BulletFactory(const factory::BulletFactory&);
-	BulletFactory& operator=(const factory::BulletFactory&);
-	
+    BulletFactory(const factory::BulletFactory&);
+    BulletFactory& operator=(const factory::BulletFactory&);
+    
 public:
-	BulletFactory(void);
-	~BulletFactory(void);
-	
-	bulletutil::Bullet* createBullet(const bulletIO::BulletFileElement&);
+    BulletFactory(void);
+    ~BulletFactory(void);
+    
+    bulletutil::Bullet* createBullet(const bulletIO::BulletFileElement&);
 
 private:
-	int countLine(std::string);
-	void analyzeInitialState(std::string, bulletutil::Bullet*);
+    int countLine(std::string);
+    void analyzeInitialState(std::string, bulletutil::Bullet*);
 };
 
 #endif // ___BULLET_FACTORY_H

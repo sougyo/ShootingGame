@@ -9,35 +9,35 @@
 #include "random.h"
 
 namespace gameutil {
-	class FileReader;
+    class FileReader;
 }
 
 class gameutil::FileReader {
 private:
-	static std::string prevFileName;
-	static std::string decryptedString;
+    static std::string prevFileName;
+    static std::string decryptedString;
 
 protected:
-	std::istringstream* in;
-	
+    std::istringstream* in;
+    
 private:
-	FileReader(const gameutil::FileReader&);
-	const gameutil::FileReader& operator=(const gameutil::FileReader&);
-	
+    FileReader(const gameutil::FileReader&);
+    const gameutil::FileReader& operator=(const gameutil::FileReader&);
+    
 public:
-	explicit FileReader(const char*);
-	FileReader(const char*, const char*);
-	virtual ~FileReader(void);
-	
+    explicit FileReader(const char*);
+    FileReader(const char*, const char*);
+    virtual ~FileReader(void);
+    
 public:
-	std::string readLine(void);
-	std::string readAll(void);
-	
+    std::string readLine(void);
+    std::string readAll(void);
+    
 private:
-	std::string decrypt(std::fstream&);
-	
+    std::string decrypt(std::fstream&);
+    
 public:
-	static int count;
+    static int count;
 };
 
 #endif // ___FILE_READER_H

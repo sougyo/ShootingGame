@@ -2,17 +2,17 @@
 #define ___GAMEFWD_H
 
 namespace gameutil {
-	class MovePattern;
-	class Moveable;
+    class MovePattern;
+    class Moveable;
 }
 
 namespace gamesystem {
-	class Fighter;
+    class Fighter;
 }
 
 namespace itemutil {
-	class ItemElement;
-	class ItemKind;
+    class ItemElement;
+    class ItemKind;
 }
 
 #endif // ___GAMEFWD_H

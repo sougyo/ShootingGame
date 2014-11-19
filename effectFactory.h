@@ -9,20 +9,20 @@
 #include "ImageFactory.h"
 
 namespace factory {
-	class EffectFactory;
+    class EffectFactory;
 }
 
 class factory::EffectFactory {
 private:
-	EffectFactory(const factory::EffectFactory&);
-	const factory::EffectFactory& operator=(const factory::EffectFactory&);
-	
+    EffectFactory(const factory::EffectFactory&);
+    const factory::EffectFactory& operator=(const factory::EffectFactory&);
+    
 public:
-	EffectFactory(void);
-	~EffectFactory(void);
-	
+    EffectFactory(void);
+    ~EffectFactory(void);
+    
 public:
-	effectutil::Effect* createEffect(std::string);
+    effectutil::Effect* createEffect(std::string);
 };
 
 #endif // ___EFFECT_FACTORY_H

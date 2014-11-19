@@ -4,20 +4,20 @@
 #include "pool.h"
 
 namespace titleutil {
-	class TitlePool;
+    class TitlePool;
 }
 
 class titleutil::TitlePool : public gameutil::Pool {
 private:
-	TitlePool(const titleutil::TitlePool&);
-	const titleutil::TitlePool& operator=(const titleutil::TitlePool&);
+    TitlePool(const titleutil::TitlePool&);
+    const titleutil::TitlePool& operator=(const titleutil::TitlePool&);
 
 public:
-	TitlePool(void);
-	~TitlePool(void);
-	
+    TitlePool(void);
+    ~TitlePool(void);
+    
 public:
-	void move(void);
+    void move(void);
 };
 
 #endif // ___TITLE_POOL_H

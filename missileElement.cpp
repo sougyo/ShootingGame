@@ -7,52 +7,52 @@ gamesystem::Fighter* MissileElement::fighter = 0;
 int MissileElement::count = 0;
 
 MissileElement::MissileElement(Missile* owner, double x, double y, double vr, double vtheta, int time)
-		: gameutil::Moveable(x, y, vr, vtheta, time) {
-	this->owner = owner;
-	initialState.x = x;
-	initialState.y = y;
-	initialState.vr = vr;
-	initialState.vtheta = vtheta;
-	initialState.time = time;
-	
-	count++;
+        : gameutil::Moveable(x, y, vr, vtheta, time) {
+    this->owner = owner;
+    initialState.x = x;
+    initialState.y = y;
+    initialState.vr = vr;
+    initialState.vtheta = vtheta;
+    initialState.time = time;
+    
+    count++;
 }
 MissileElement::~MissileElement(void) {
-	count--;
+    count--;
 }
 
 void MissileElement::fire(void) {
-	isActive_ = true;
-	if (time == 0) {
-		x += fighter->getX();
-		y += fighter->getY();
-	}
+    isActive_ = true;
+    if (time == 0) {
+        x += fighter->getX();
+        y += fighter->getY();
+    }
 }
 
 void MissileElement::move(void) {
-	if (isActive_) {
-		owner->movePattern->move(this);
-		if (time == 0) {
-			x += fighter->getX();
-			y += fighter->getY();
-		}
-		if (isOutOfDisplay())
-			toInactive();
-	}
+    if (isActive_) {
+        owner->movePattern->move(this);
+        if (time == 0) {
+            x += fighter->getX();
+            y += fighter->getY();
+        }
+        if (isOutOfDisplay())
+            toInactive();
+    }
 }
 
 void MissileElement::draw(void) {
-	if (isAppearance())
-		owner->image->drawImage(0, getX(), getY());
+    if (isAppearance())
+        owner->image->drawImage(0, getX(), getY());
 }
 
 void MissileElement::toInactive(void) {
-	isActive_ = false;
-	owner->activeCount--;
-	x = initialState.x;
-	y = initialState.y;
-	vr = initialState.vr;
-	vtheta = initialState.vtheta;
-	time = initialState.time;
-	movePatternIndex = 0;
+    isActive_ = false;
+    owner->activeCount--;
+    x = initialState.x;
+    y = initialState.y;
+    vr = initialState.vr;
+    vtheta = initialState.vtheta;
+    time = initialState.time;
+    movePatternIndex = 0;
 }

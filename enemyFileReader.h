@@ -14,32 +14,32 @@
 
 class enemyIO::EnemyFileReader : public gameutil::FileReader {
 private:
-	EnemyFileReader(const enemyIO::EnemyFileReader&);
-	enemyIO::EnemyFileReader& operator=(const enemyIO::EnemyFileReader&);
+    EnemyFileReader(const enemyIO::EnemyFileReader&);
+    enemyIO::EnemyFileReader& operator=(const enemyIO::EnemyFileReader&);
 
 private:
-	explicit EnemyFileReader(const char*);
-	
+    explicit EnemyFileReader(const char*);
+    
 public:
-	EnemyFileReader(const char*, const char*);
-	~EnemyFileReader(void);
-	
+    EnemyFileReader(const char*, const char*);
+    ~EnemyFileReader(void);
+    
 public:
-	enemyIO::EnemyFile* createEnemyFile(void);
-	
+    enemyIO::EnemyFile* createEnemyFile(void);
+    
 private:
-	bulletIO::BulletFile* analyzeBulletFile(void);
-	int analyzeHp(void);
-	bool analyzeCanCollision(void);
-	std::string analyzeEnemyName(std::string);
-	std::string analyzeImageFileName(void);
-	std::string analyzeInitialStateString(void);
-	std::string analyzeMovePatternString(void);
-	std::string analyzeBulletPatternString(void);
-	std::string analyzeImagePatternString(void);
-	std::string analyzeOptionPatternString(void);
-	
-	void ignoreMemoString(void);
+    bulletIO::BulletFile* analyzeBulletFile(void);
+    int analyzeHp(void);
+    bool analyzeCanCollision(void);
+    std::string analyzeEnemyName(std::string);
+    std::string analyzeImageFileName(void);
+    std::string analyzeInitialStateString(void);
+    std::string analyzeMovePatternString(void);
+    std::string analyzeBulletPatternString(void);
+    std::string analyzeImagePatternString(void);
+    std::string analyzeOptionPatternString(void);
+    
+    void ignoreMemoString(void);
 };
 
 
